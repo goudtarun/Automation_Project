@@ -1,0 +1,13 @@
+---
+ - name: This is to install nginx and running an simple website
+   hosts: prod
+   tasks:
+     - apt:
+        name: nginx
+        state: latest
+        update_cache: yes
+     - copy:
+        src: index.html
+        dest: /var/www/html/
+
+
